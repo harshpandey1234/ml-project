@@ -110,7 +110,7 @@ def main():
   
   if st.button('Predict Marks'):
     pred_marks = predict_g3(input_features)
-    st.success(f'The predicted mark is: {pred_marks}')
+    st.success(f'The predicted mark is: {round(pred_marks, 3)}')
 
 
 def predict_g3(input_features) :
