@@ -116,8 +116,8 @@ def main():
 def predict_g3(input_features) :
   with st.spinner('Loading Model...'):
     regressor_model = tf.keras.models.load_model(r'model.h5', compile = False)
-      
-    return regressor_model.predict(input_features)
+    g3_marks = regressor_model.predict(input_features)
+    return g3_marks[0]
 
 def add_bg_from_url():
     st.markdown(
