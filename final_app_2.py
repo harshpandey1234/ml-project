@@ -123,34 +123,5 @@ def add_bg_from_url():
          unsafe_allow_html=True
      )
 
-footer = """
-<style>
-a:link , a:visited{
-    color: white;
-    background-color: transparent;
-    text-decoration: None;
-}
-a:hover,  a:active {
-    color: red;
-    background-color: transparent;
-    text-decoration: None;
-}
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: transparent;
-    color: black;
-    text-align: center;
-}
-</style>
-<div class="footer">
-<p style = "align:center; color:white">Developed with ❤ by C_11 Group</p>
-</div>
-"""
-
-st.markdown(footer, unsafe_allow_html = True)
-
 
 if __name__ == '__main__' : main()
