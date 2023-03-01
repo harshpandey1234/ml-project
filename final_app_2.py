@@ -5,6 +5,17 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import tensorflow_hub as hub
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+
+st.markdown(hide_streamlit_style, unsafe_allow_html = True)
+
+st.title('Performance Prediction of Student')
+
 
 def main():
   add_bg_from_url()
