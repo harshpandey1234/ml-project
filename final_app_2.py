@@ -7,6 +7,7 @@ import tensorflow_hub as hub
 
 
 def main():
+  add_bg_from_url()
   g1_marks = st.number_input("G1 marks: ")
   g2_marks = st.number_input("G2 marks: ")
   absent = st.number_input("absent: ")
@@ -106,6 +107,50 @@ def predict_g3(input_features) :
     regressor_model = tf.keras.models.load_model(r'model.h5', compile = False)
       
     return regressor_model.predict(input_features)
+
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+          
+             background-image: url("https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+footer = """
+<style>
+a:link , a:visited{
+    color: white;
+    background-color: transparent;
+    text-decoration: None;
+}
+a:hover,  a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: None;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+}
+</style>
+<div class="footer">
+<p style = "align:center; color:white">Developed with ❤ by C_11 Group</p>
+</div>
+"""
+
+st.markdown(footer, unsafe_allow_html = True)
 
 
 if __name__ == '__main__' : main()
